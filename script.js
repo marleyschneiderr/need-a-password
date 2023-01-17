@@ -43,7 +43,7 @@ function getPrompts(){
       return false; //check if anything went wrong
   }
 
-
+  //Asking questions for what a person wants in thier password
   if (confirm("Do you want to use captial letters in your password?" )) {
     selectArray = selectArray.concat(upperCaseArray);
   }
@@ -52,13 +52,15 @@ function getPrompts(){
     selectArray = selectArray.concat(lowerCaseArray);
   }
 
-  if (confirm("Do you want to use special characters in your password?" )) {
-    selectArray = selectArray.concat(symbolCharArray);
-  }
-
   if (confirm("Do you want to use numbers in your password?" )) {
     selectArray = selectArray.concat(numbersArray);
   }
 
+  if (confirm("Do you want to use special characters in your password?" )) {
+    selectArray = selectArray.concat(symbolCharArray);
+  }
+  return true; //end of function
 
 }
+
+
