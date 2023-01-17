@@ -37,7 +37,7 @@ function writePassword() {
 //Call the generate password button to work
 function generatePassword() {
   var password = "";
-  for(var i = 0; i < passwordLength; ii+) //loop will continue on for how ever many characters you want in your password 
+  for(var i = 0; i < passwordLength; i = i + 1) //loop will continue on for how ever many characters you want in your password 
 }
 
 
