@@ -36,6 +36,7 @@ function generatePassword() {
 // Where all the information is obtained from in the password
 function getPrompts(){
   // parseInt converts the string into the number you want 
+  selectArray = []; //resets the array so it can restart
   passwordLength = parseInt(prompt("How many characters do you want in your password? 8 - 128 characters avaliable" ));
 
   if (Number.isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
