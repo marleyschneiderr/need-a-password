@@ -1,4 +1,4 @@
-// varibales 
+// variables 
 var CharLength = 8;
 //array that will store all possible symbols and letters to use when password is generated 
 var selectArray = [];
@@ -19,7 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts(); //if this returns false, then the person didn't enter the correct password, if true, they did it correctly
+  var correctPrompts = getPrompts(); //if this returns false, then the person didn't enter the correct prompts, if true, they did it correctly
   var passwordTry = document.querySelector("#password");
 
   // if you give me the correct prompts, then a password can be returned, but only IF you give me the correct prompts
@@ -34,7 +34,7 @@ function writePassword() {
 //Call the generate password button to work
 function generatePassword() {
   var password = "";
-  for(var i = 0; i < passwordLength; i = i + 1) { //loop will continue on for how ever many characters you want in your password 
+  for(var i = 0; i < passwordLength; i = i + 1) { //loop will continue on for how ever many characters you want in your password based on what you input
     var randomIndex = Math.floor(Math.random() * selectArray.length);
     password = password + selectArray[randomIndex];
   }
@@ -55,7 +55,7 @@ function getPrompts() {
       return false; //check if anything went wrong
   }
 
-  //Asking questions for what a person wants in thier password
+  //Asking questions for what a person wants in their password
   if (confirm("Do you want to use captial letters in your password?" )) {
     selectArray = selectArray.concat(upperCaseArray);
   }
