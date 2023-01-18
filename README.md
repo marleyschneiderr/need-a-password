@@ -22,9 +22,9 @@ Created by Marley Schneider, Github: https://github.com/marleyschneiderr
 
 ## Usage
 
-This website was designed to serve as the home base for Marley Schneider's web development projects. This page can be used to access and examine Marley's web development work, contact Marley, discover more about Marley's background, and view Marley's Github with previous work.
+This website was created to generate a randomized password in order to increase the security of confidential data. If a user wants to generate a password with special characters, digits, uppercase and lowercase letters, or a combination of these, they can use this password generator.
 
-![Screenshot of Full Webpage](assets/images/Portfolio-Pic.png)
+![Screenshot of Full Webpage](assets/images/pass-gen.png)
 
 ## Credits
 
