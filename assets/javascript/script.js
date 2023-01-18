@@ -34,7 +34,7 @@ function writePassword() {
 //Call the generate password button to work
 function generatePassword() {
   var password = "";
-  for(var i = 0; i < passwordLength; i++) { //loop will continue on for how ever many characters you want in your password 
+  for(var i = 0; i < passwordLength; i = i + 1) { //loop will continue on for how ever many characters you want in your password 
     var randomIndex = Math.floor(Math.random() * selectArray.length);
     password = password + selectArray[randomIndex];
   }
@@ -50,6 +50,7 @@ function getPrompts() {
   passwordLength = parseInt(prompt("How many characters do you want in your password? 8 - 128 characters avaliable" ));
 
   if (Number.isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+      // alert will pop up if user does not input number into first question box asking how many characters 
       alert("Please provide a numerical value for your requested password length, 8 - 128 characters. Re-enter number." );
       return false; //check if anything went wrong
   }
