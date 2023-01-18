@@ -23,12 +23,12 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var correctPrompts = getPrompts(); //if this returns false, then the person didn't enter the correct password, if true, they did it correctly
 
-  // if you give mt the correct prompts, then a password can be returned, but only IF you give me the correct prompts
+  // if you give me the correct prompts, then a password can be returned, but only IF you give me the correct prompts
   if(correctPrompts) {
-      var password = generatePassword();
+      var updatedPassword = generatePassword();
       var passwordText = document.querySelector("#password");
 
-      passwordText.value = password;
+      passwordText.value = updatedPassword;
 
   }
 
@@ -37,7 +37,14 @@ function writePassword() {
 //Call the generate password button to work
 function generatePassword() {
   var password = "";
-  for(var i = 0; i < passwordLength; i = i + 1) //loop will continue on for how ever many characters you want in your password 
+  for(var i = 0; i < passwordLength; i++) { //loop will continue on for how ever many characters you want in your password 
+    var randomIndex = Math.floor(Math.random() * selectArray.length);
+    password = password + selectArray[randomIndex];
+
+  }
+
+  return password; 
+
 }
 
 
