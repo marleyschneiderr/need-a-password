@@ -11,7 +11,6 @@ var upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'
 var lowerCaseArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -30,9 +29,7 @@ function writePassword() {
       passwordText.value = updatedPassword;
   } else {
     passwordTry.value = "";
-
   }
-
 }
 
 //Call the generate password button to work
@@ -41,13 +38,11 @@ function generatePassword() {
   for(var i = 0; i < passwordLength; i++) { //loop will continue on for how ever many characters you want in your password 
     var randomIndex = Math.floor(Math.random() * selectArray.length);
     password = password + selectArray[randomIndex];
-
   }
 
   return password; 
 
 }
-
 
 // Where all the information is obtained from in the password
 function getPrompts(){
