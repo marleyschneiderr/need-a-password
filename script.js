@@ -22,13 +22,14 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var correctPrompts = getPrompts(); //if this returns false, then the person didn't enter the correct password, if true, they did it correctly
+  var passwordText = document.querySelector("#password");
 
   // if you give me the correct prompts, then a password can be returned, but only IF you give me the correct prompts
-  if(correctPrompts) {
+  if (correctPrompts) {
       var updatedPassword = generatePassword();
-      var passwordText = document.querySelector("#password");
-
       passwordText.value = updatedPassword;
+  } else {
+    passwordTry.value = "";
 
   }
 
